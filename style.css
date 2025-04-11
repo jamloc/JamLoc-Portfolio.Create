@@ -230,7 +230,7 @@
 
         /* HERO */
         #hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('./Pics/hero-bg.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('./hero-bg.png');
             min-height: 100vh;
             background-position: center;
             background-size: cover;
