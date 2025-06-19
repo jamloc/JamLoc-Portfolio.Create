@@ -228,6 +228,31 @@
             }
         }
 
+
+        @media (max-width: 768px) {
+    .nav-links.active {
+        display: flex;
+        background-color: #fff;
+    }
+
+    .nav-links.active li a {
+        color: var(--c-dark);
+    }
+
+        .hamburger span {
+        background-color: var(--c-dark); /* Match your nav text color */
+    }
+
+    .scrolled .hamburger span {
+        background-color: var(--c-dark); /* Dark when nav scrolled */
+    }
+
+    .hamburger.active span {
+        background-color: var(--c-dark); /* Stay dark when menu open */
+    }
+}
+
+
         /* HERO */
         #hero {
             background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('./hero-bg.png');
