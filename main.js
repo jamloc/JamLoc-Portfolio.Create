@@ -198,3 +198,51 @@ new Typed("#my-names",{
 
 
 });
+
+
+// ===============================
+// SCROLL REVEAL ANIMATION
+// ===============================
+
+
+const reveals = document.querySelectorAll(".reveal");
+
+
+
+const revealOnScroll = ()=>{
+
+
+    reveals.forEach(element=>{
+
+
+        const position =
+        element.getBoundingClientRect().top;
+
+
+        const screen =
+        window.innerHeight;
+
+
+
+        if(position < screen - 100){
+
+            element.classList.add("show");
+
+        }
+
+
+    });
+
+
+};
+
+
+
+window.addEventListener(
+"scroll",
+revealOnScroll
+);
+
+
+
+revealOnScroll();
