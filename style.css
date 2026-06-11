@@ -777,24 +777,14 @@ height:260px;
 }
 
 /* ===============================
-   SMOOTH ANIMATIONS
+   CLEAN SCROLL ANIMATIONS
 ================================ */
 
-
-/* smooth anchor scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-
-/* Default hidden state */
 
 .reveal{
 
     opacity:0;
-    transform:translateY(50px);
+    transform:translateY(40px);
     transition:
     opacity .8s ease,
     transform .8s ease;
@@ -813,20 +803,17 @@ html {
 
 
 
-
-/* Hero animation */
-
+/* Hero entrance */
 
 .hero-content{
 
-animation: heroEnter 1.2s ease forwards;
+animation:heroEnter 1s ease forwards;
 
 }
 
 
 
 @keyframes heroEnter{
-
 
 from{
 
@@ -835,7 +822,6 @@ transform:translateY(40px);
 
 }
 
-
 to{
 
 opacity:1;
@@ -843,83 +829,19 @@ transform:translateY(0);
 
 }
 
-
 }
 
 
 
-
-
-
-/* Navbar animation */
-
-.navbar{
-
-transition:
-background .4s ease,
-box-shadow .4s ease,
-height .3s ease;
-
-}
-
-
-
-
-
-
-/* Button animation */
-
-
-.btn{
-
-position:relative;
-overflow:hidden;
-
-}
-
-
-
-.btn::before{
-
-
-content:"";
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:100%;
-background:white;
-opacity:.3;
-transition:.4s;
-
-
-}
-
-
-
-.btn:hover::before{
-
-left:100%;
-
-}
-
-
-
-
-
-
-
-
-/* Cards animation */
+/* Smooth cards */
 
 
 .service-card,
 .project{
 
-
 transition:
-transform .4s ease,
-box-shadow .4s ease;
+transform .35s ease,
+box-shadow .35s ease;
 
 }
 
@@ -928,39 +850,44 @@ box-shadow .4s ease;
 .service-card:hover,
 .project:hover{
 
-
-transform:translateY(-12px);
-
-box-shadow:
-0 20px 40px rgba(0,0,0,.15);
+transform:translateY(-10px);
+box-shadow:0 20px 35px #0002;
 
 }
 
 
 
 
-
-
-
-
-/* Project image zoom */
+/* Image hover */
 
 
 .project img{
 
-
-transition:
-transform .7s ease;
-
+transition:transform .5s ease;
 
 }
-
 
 
 .project:hover img{
 
+transform:scale(1.07);
 
-transform:scale(1.08);
+}
+
+
+
+/* Button */
+
+.btn{
+
+transition:.3s ease;
+
+}
+
+
+.btn:hover{
+
+transform:translateY(-4px);
 
 }
 
@@ -969,158 +896,41 @@ transform:scale(1.08);
 
 
 
-
-
-/* Filter button */
-
-
-.filter-btn{
-
-
-transition:
-transform .3s ease,
-background .3s ease;
-
-
-}
-
-
-
-.filter-btn:hover{
-
-
-transform:translateY(-3px);
-
-
-}
-
-
-
-
-
-
-
-/* About image */
+/* floating image */
 
 
 .about-image{
 
-
-animation: floating 5s ease-in-out infinite;
-
+animation:floatImage 5s ease-in-out infinite;
 
 }
 
 
 
-@keyframes floating{
+@keyframes floatImage{
 
-
-0%{
+0%,100%{
 
 transform:translateY(0);
 
 }
-
 
 50%{
 
-transform:translateY(-12px);
+transform:translateY(-10px);
 
 }
 
-
-100%{
-
-transform:translateY(0);
-
 }
 
-
-}
-
-
-
-
-
-
-
-
-/* footer entrance */
-
-
-footer{
-
-animation:footerFade 1s ease;
-
-}
-
-
-@keyframes footerFade{
-
-
-from{
-
-opacity:0;
-
-}
-
-
-to{
-
-opacity:1;
-
-}
-
-
-}
-
-
-
-
-
-/* mobile smoothness */
 
 
 @media(max-width:700px){
-
 
 .about-image{
 
 animation:none;
 
 }
-
-
-}
-
-
-/* ===============================
-   SCROLL REVEAL FIXED
-================================ */
-
-.reveal{
-
-    opacity:1;
-    transform:translateY(0);
-    transition:
-    opacity .8s ease,
-    transform .8s ease;
-
-}
-
-
-.reveal.animate{
-
-    opacity:0;
-    transform:translateY(50px);
-
-}
-
-
-.reveal.animate.show{
-
-    opacity:1;
-    transform:translateY(0);
 
 }
