@@ -201,40 +201,50 @@ new Typed("#my-names",{
 
 
 // ===============================
-// SCROLL REVEAL ANIMATION
+// SAFE SCROLL REVEAL
 // ===============================
 
 
 const reveals = document.querySelectorAll(".reveal");
 
 
+// only activate animation when JS works
 
-const revealOnScroll = ()=>{
+reveals.forEach(item=>{
 
+    item.classList.add("animate");
 
-    reveals.forEach(element=>{
-
-
-        const position =
-        element.getBoundingClientRect().top;
-
-
-        const screen =
-        window.innerHeight;
+});
 
 
 
-        if(position < screen - 100){
-
-            element.classList.add("show");
-
-        }
+function revealOnScroll(){
 
 
-    });
+reveals.forEach(item=>{
 
 
-};
+    const top =
+    item.getBoundingClientRect().top;
+
+
+    const height =
+    window.innerHeight;
+
+
+
+    if(top < height - 100){
+
+        item.classList.add("show");
+
+    }
+
+
+
+});
+
+
+}
 
 
 
@@ -242,7 +252,6 @@ window.addEventListener(
 "scroll",
 revealOnScroll
 );
-
 
 
 revealOnScroll();
