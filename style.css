@@ -1093,3 +1093,34 @@ animation:none;
 
 
 }
+
+
+/* ===============================
+   SCROLL REVEAL FIXED
+================================ */
+
+.reveal{
+
+    opacity:1;
+    transform:translateY(0);
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+
+.reveal.animate{
+
+    opacity:0;
+    transform:translateY(50px);
+
+}
+
+
+.reveal.animate.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
